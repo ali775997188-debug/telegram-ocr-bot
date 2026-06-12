@@ -3,6 +3,6 @@ RUN apt-get update && apt-get install -y tesseract-ocr tesseract-ocr-ara libgl1-
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY app.py .
+COPY bpp.py .
 EXPOSE 10000
-CMD ["python", "app.py"]
+CMD ["python", "bpp.py"]
